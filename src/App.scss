@@ -1,0 +1,120 @@
+$bgColour-nav: linear-gradient(rgb(51, 48, 48), rgb(7, 7, 7));
+$bgColour-page: rgb(224, 227, 233);
+$btn2: linear-gradient(45deg, rgb(70, 110, 221), rgb(152, 96, 241));
+.App {
+  display: flex;
+  height: 100vh;
+  background-color: $bgColour-page;
+  .nav-container {
+    background-image: $bgColour-nav;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    margin: 20px;
+    border-radius: 20px;
+    color: white;
+    .nav-heading {
+      font-size: 25px;
+      font-weight: bold;
+      padding: 10px;
+    }
+    nav {
+      display: flex;
+      flex-direction: column;
+
+      width: 20vw;
+    }
+    a {
+      text-decoration: none;
+      padding: 20px;
+      color: white;
+      margin: 0 20px;
+      border-radius: 10px;
+    }
+    .active {
+      background-color: mediumvioletred;
+    }
+    .btn-container {
+      align-items: flex-end;
+      justify-content: center;
+      width: 100%;
+      display: flex;
+      a {
+        width: 100%;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .upload-page {
+    width: 75vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    .upload-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .upload-heading,
+      .btn-upload {
+        background-image: $btn2;
+        font-size: 25px;
+        font-weight: bold;
+        color: white;
+        border-radius: 20px;
+        text-align: center;
+      }
+      .upload-heading {
+        padding: 30px 60px;
+      }
+      .btn-upload {
+        padding: 10px 60px;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+      .btn-hidden {
+        display: none;
+      }
+
+      .upload-div {
+        width: 400px;
+        height: 400px;
+        background-color: white;
+        border: 2px dashed gray;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        .upload-icon {
+          font-size: 100px;
+          color: gray;
+        }
+        .uploaded-img {
+          width: 395px;
+          height: 395px;
+          position: relative;
+          z-index: 0;
+          bottom: 18px;
+        }
+        button {
+          background-color: transparent;
+          position: relative;
+          z-index: 10;
+          top: 30px;
+          right: 10px;
+        }
+        .delete-btn {
+          color: gray;
+          font-size: 40px;
+          position: relative;
+          z-index: 1;
+          float: right;
+        }
+      }
+    }
+  }
+}
